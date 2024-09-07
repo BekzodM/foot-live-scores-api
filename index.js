@@ -37,7 +37,7 @@ app.get('/fixtures', async(req, res) => {
 
 app.get('/epl', async(req, res) => {
     try {
-        fetch('https://v3.football.api-sports.io/standings?league=39&season=2023', {
+        fetch('https://v3.football.api-sports.io/standings?league=39&season=2024', {
             method: 'GET',
             headers: {
               'x-rapidapi-key': process.env.API_KEY,
@@ -55,7 +55,7 @@ app.get('/epl', async(req, res) => {
 
 app.get('/laliga', async(req, res) => {
   try {
-    fetch('https://v3.football.api-sports.io/standings?league=140&season=2023', {
+    fetch('https://v3.football.api-sports.io/standings?league=140&season=2024', {
       method: 'GET',
       headers: {
         'x-rapidapi-key': process.env.API_KEY,
@@ -73,7 +73,7 @@ app.get('/laliga', async(req, res) => {
 
 app.get('/ucl', async(req, res) => {
   try {
-    fetch('https://v3.football.api-sports.io/standings?league=2&season=2023', {
+    fetch('https://v3.football.api-sports.io/standings?league=2&season=2024', {
       method: 'GET',
       headers: {
         'x-rapidapi-key': process.env.API_KEY,
@@ -92,7 +92,7 @@ app.get('/ucl', async(req, res) => {
 
 app.get('/uel', async(req, res) => {
   try {
-    fetch('https://v3.football.api-sports.io/standings?league=3&season=2023', {
+    fetch('https://v3.football.api-sports.io/standings?league=3&season=2024', {
       method: 'GET',
       headers: {
         'x-rapidapi-key': process.env.API_KEY,
