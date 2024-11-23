@@ -1,4 +1,5 @@
 const express = require("express");
+const serverless = require("serverless-http");
 require('dotenv').config();
 const fetch = require("node-fetch");
 const cors = require("cors");
@@ -7,9 +8,6 @@ const app = express();
 app.use(cors());
 const port = process.env.PORT || 9000;
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
 
 app.get('/fixtures', async(req, res) => {
   const { date } = req.query;
@@ -109,6 +107,4 @@ app.get('/uel', async(req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}!`);
-});
+module.exports.handler = serverless(app)
